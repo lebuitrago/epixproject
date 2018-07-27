@@ -9,6 +9,7 @@ public class Channel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    private String pic_name;
     private Integer number;
 
     public Channel() {
@@ -35,6 +36,14 @@ public class Channel {
         this.name = name;
     }
 
+    public String getPic_name() {
+        return pic_name;
+    }
+
+    public void setPic_name(String pic_name) {
+        this.pic_name = pic_name;
+    }
+
     public Integer getNumber() {
         return number;
     }
@@ -49,6 +58,7 @@ public class Channel {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", number=" + number +
+                ", pic_name=" + pic_name +
                 '}';
     }
 }

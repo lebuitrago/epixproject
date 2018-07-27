@@ -9,10 +9,12 @@
 
 <table class="table table-striped table-bordered table-hover">
     <tr>
+        <th></th>
         <th>Name</th>
         <th>Number</th>
     </tr>
     <tr ng-repeat="channel in channels">
+        <td><img src="/images/{{channel.pic_name}}" alt="Channel Logo"></td>
         <td>{{channel.name}}</td>
         <td>{{channel.number}}</td>
     </tr>
