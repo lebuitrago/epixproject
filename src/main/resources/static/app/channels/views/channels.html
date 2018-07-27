@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Channels</title>
+</head>
+<body>
+<p>Channels</p>
+
+<table class="table table-striped table-bordered table-hover">
+    <tr>
+        <th>Name</th>
+        <th>Number</th>
+    </tr>
+    <tr ng-repeat="channel in channels">
+        <td>{{channel.name}}</td>
+        <td>{{channel.number}}</td>
+    </tr>
+</table>
+
+</body>
+</html>

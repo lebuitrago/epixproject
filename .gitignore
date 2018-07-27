@@ -1,0 +1,22 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea/
+*.iml
+out
+gen
+target/
+*.jar
+*.war
+*.ear
+src/main/resources/static/bower_components/
+
+### Do not ignore the following
+!/src/main/resources/static/bower_components/angular/angular.js
+!/src/main/resources/static/bower_components/angular-resource/angular-resource.js
+!/src/main/resources/static/bower_components/angular-ui-router/release/angular-ui-router.js
+!/src/main/resources/static/bower_components/jquery/dist/jquery.slim.js
+!/src/main/resources/static/bower_components/bootstrap/dist/js/bootstrap.min.js
+!/src/main/resources/static/bower_components/bootstrap/dist/css/bootstrap.css

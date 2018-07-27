@@ -18,7 +18,9 @@
 
 var app = angular.module('epixApp', [
 	'ui.router',
-	'ngResource'
+	'ngResource',
+    'epixApp.controllers.channel',
+    'epixApp.services.channel'
 ]);
 
 
@@ -70,13 +72,11 @@ app.config([ '$stateProvider', '$urlRouterProvider', '$locationProvider',
 			$urlRouterProvider.otherwise("/")
 
 			$stateProvider
-            // you can set this to no template if you just want to use the html in the page
-            .state('home', {
-                url: "/",
-                templateUrl: "app/home.html",
-                data: {
-                    pageTitle: 'Home'
-                }
+			/* **********	CHANNELS	********** */
+            .state('channels', {
+                url: 			'/channels',
+                templateUrl: 	'app/channels/views/channels.html',
+                controller: 	'ChannelListController'
             })
             ;
 		}
