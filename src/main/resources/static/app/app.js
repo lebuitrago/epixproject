@@ -1,13 +1,15 @@
 /* When adding a new css file
- * 1) Add the bower_component directory location to index.html for this new CSS file
- * 2) Add to gulpfile.js in 'minify-css' section
+ * 1) Add the /js directory location to index.html for this new CSS file
+ * 2) Add to gulpfile.js in 'minify-css' section - if using gulp
  * */
 
 /* When adding a new library/module
  * 1) Bower install
  * 2) Add to module below
- * 3) Add to gulpfile.js
- * 4) Add to karma.conf.js
+ * 3) Add to gulpfile.js     - if using gulp
+ * 4) Add to karma.conf.js   - if using gulp
+ * 5) Move *.js file to /js
+ * 6) update index.html with correct /js path
  * */
 
 /* When adding a new Service
