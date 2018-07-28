@@ -29,4 +29,18 @@ angular.module('epixApp.controllers.channel', [])
     			  });
 			}
 	])
+	.controller('ChannelShowsViewController',
+			['$scope', '$state', '$stateParams', 'ChannelResource',
+			function($scope, $state, $stateParams, ChannelResource) {
+    			  $scope.channel_shows = ChannelResource.channel_shows.query(
+    			  {id: $stateParams.id},
+    			  // SUCCESS
+    			  function(data){
+    			  },
+    			  // ERROR
+    			  function(error){
+    			    console.log('Error: fetching channel shows --> ', error);
+    			  });
+			}
+	])
 	;

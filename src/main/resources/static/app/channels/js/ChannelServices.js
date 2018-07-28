@@ -12,6 +12,14 @@ angular.module('epixApp.services.channel', [])
 							method: 'PUT'
 						}
 					}
+			),
+			channel_shows: $resource('/api/v1/channels/:id/shows',
+					{ id: '@id' },
+					{
+						'update' 	: 	{
+							method: 'PUT'
+						}
+					}
 			)
 	   };
 	}
