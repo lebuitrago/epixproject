@@ -1,8 +1,6 @@
 package main.java.epix.controllers;
 
-import main.java.epix.models.Channel;
 import main.java.epix.models.Show;
-import main.java.epix.repositories.IChannelRepository;
 import main.java.epix.repositories.IShowRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,12 +11,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/v1")
-public class ChannelController {
+public class ShowController {
     @Autowired
-    private IChannelRepository channelRepository;
+    private IShowRepository showRepository;
 
-    @RequestMapping(value = "channels", method = RequestMethod.GET)
-    public List<Channel> list(){
-        return channelRepository.findAll();
+    @RequestMapping(value = "shows", method = RequestMethod.GET)
+    public List<Show> listShows() {
+        return showRepository.findAll();
     }
 }

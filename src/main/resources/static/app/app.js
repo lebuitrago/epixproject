@@ -22,7 +22,9 @@ var app = angular.module('epixApp', [
 	'ui.router',
 	'ngResource',
     'epixApp.controllers.channel',
-    'epixApp.services.channel'
+    'epixApp.controllers.show',
+    'epixApp.services.channel',
+    'epixApp.services.show'
 ]);
 
 
@@ -79,6 +81,12 @@ app.config([ '$stateProvider', '$urlRouterProvider', '$locationProvider',
                 url: 			'/channels',
                 templateUrl: 	'app/channels/views/channels.html',
                 controller: 	'ChannelListController'
+            })
+			/* **********	SHOWS	********** */
+            .state('shows', {
+                url: 			'/shows',
+                templateUrl: 	'app/shows/views/shows.html',
+                controller: 	'ShowListController'
             })
             ;
 		}

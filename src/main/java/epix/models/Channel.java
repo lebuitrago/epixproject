@@ -3,7 +3,7 @@ package main.java.epix.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "channel")
+@Table(name = "CHANNEL")
 public class Channel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

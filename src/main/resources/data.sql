@@ -2,3 +2,6 @@ INSERT INTO channel (channel_id, channel_name, channel_number, pic_name) VALUES 
 INSERT INTO channel (channel_id, channel_name, channel_number, pic_name) VALUES (2, 'EPIX 2', 101, 'epix-2.png')
 INSERT INTO channel (channel_id, channel_name, channel_number, pic_name) VALUES (3, 'EPIX HITS', 102, 'epix-drive-in.png')
 INSERT INTO channel (channel_id, channel_name, channel_number, pic_name) VALUES (4, 'EPIX DRIVE-IN', 103, 'epix-hits.png')
+INSERT INTO show (show_id, show_name, show_description, channel_id) VALUES (1, 'Show #1', 'The first show', 1)
+INSERT INTO show (show_id, show_name, show_description, channel_id) VALUES (2, 'Show #2', 'The first show', 2)
+INSERT INTO show (show_id, show_name, show_description, channel_id) VALUES (3, 'Show #3', 'The first show', 3)
