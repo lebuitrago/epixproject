@@ -14,4 +14,19 @@ angular.module('epixApp.controllers.show', [])
     						console.log('Error: fetching list of shows --> ', error);
     					});
 			}
-	]);
+	])
+	.controller('ShowViewController',
+			['$scope', '$state', '$stateParams', 'ShowResource',
+			function($scope, $state, $stateParams, ShowResource) {
+    			  $scope.show = ShowResource.shows.get(
+    			        {id: $stateParams.id},
+    			        // SUCCESS
+    			        function(data){
+    			         },
+    			        // ERROR
+    			        function(error){
+    			            console.log('Error: fetching show --> ', error);
+    			        });
+			}
+	])
+	;

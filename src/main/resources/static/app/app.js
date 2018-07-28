@@ -82,11 +82,21 @@ app.config([ '$stateProvider', '$urlRouterProvider', '$locationProvider',
                 templateUrl: 	'app/channels/views/channels.html',
                 controller: 	'ChannelListController'
             })
+            .state('viewChannel', {
+                url: 			'/channels/:id',
+                templateUrl: 	'app/channels/views/channel-view.html',
+                controller: 	'ChannelViewController'
+            })
 			/* **********	SHOWS	********** */
             .state('shows', {
                 url: 			'/shows',
                 templateUrl: 	'app/shows/views/shows.html',
                 controller: 	'ShowListController'
+            })
+            .state('viewShow', {
+                url: 			'/shows/:id',
+                templateUrl: 	'app/shows/views/show-view.html',
+                controller: 	'ShowViewController'
             })
             ;
 		}

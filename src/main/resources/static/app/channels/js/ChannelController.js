@@ -14,4 +14,19 @@ angular.module('epixApp.controllers.channel', [])
     						console.log('Error: fetching list of channels --> ', error);
     					});
 			}
-	]);
+	])
+	.controller('ChannelViewController',
+			['$scope', '$state', '$stateParams', 'ChannelResource',
+			function($scope, $state, $stateParams, ChannelResource) {
+    			  $scope.channel = ChannelResource.channels.get(
+    			  {id: $stateParams.id},
+    			  // SUCCESS
+    			  function(data){
+    			  },
+    			  // ERROR
+    			  function(error){
+    			    console.log('Error: fetching channel --> ', error);
+    			  });
+			}
+	])
+	;
