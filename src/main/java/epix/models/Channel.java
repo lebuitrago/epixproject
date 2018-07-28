@@ -7,17 +7,22 @@ import javax.persistence.*;
 public class Channel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="CHANNEL_ID")
     private Long id;
+    @Column(name="CHANNEL_NAME",nullable=false, unique = true)
     private String name;
+    @Column(name="PIC_NAME",nullable=false)
     private String pic_name;
+    @Column(name="CHANNEL_NUMBER",nullable=false, unique = true)
     private Integer number;
 
     public Channel() {
     }
 
-    public Channel(String name, Integer number) {
+    public Channel(String name, Integer number, String pic_name) {
         this.name = name;
         this.number = number;
+        this.pic_name = pic_name;
     }
 
     public Long getId() {
