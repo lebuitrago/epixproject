@@ -13,6 +13,10 @@ angular.module('epixApp.controllers.show', [])
     					function(error){
     						console.log('Error: fetching list of shows --> ', error);
     					});
+
+    			    $scope.setSelected = function() {
+                            console.log("This row has been clicked!");
+                        };
 			}
 	])
 	.controller('ShowViewController',

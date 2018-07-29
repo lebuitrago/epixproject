@@ -13,6 +13,10 @@ angular.module('epixApp.controllers.channel', [])
     					function(error){
     						console.log('Error: fetching list of channels --> ', error);
     					});
+
+                $scope.setSelected = function() {
+                    console.log("This row has been clicked!");
+                };
 			}
 	])
 	.controller('ChannelViewController',

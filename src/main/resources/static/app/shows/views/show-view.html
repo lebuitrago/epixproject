@@ -1,2 +1,29 @@
-<p>S-H-O-W!</p>
-{{show}}
+<div class="starter-template">
+    <figure class="figure">
+        <img src="/images/shows/{{show.pic_name}}" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+        <figcaption class="figure-caption">{{show.name}}</figcaption>
+    </figure>
+</div>
+
+
+
+<table class="table table-striped table-bordered table-hover">
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Channel</th>
+    </tr>
+    <tr>
+        <td>{{show.name}}</td>
+        <td>{{show.description}}</td>
+        <td>{{show.channel.name}}</td>
+    </tr>
+</table>
+
+<div class="starter-template">
+    <p class="lead">
+        <a class="btn btn-outline-success" ui-sref="channels">Watch</a>
+        <a class="btn btn-outline-warning" ui-sref="channels">All Channels</a>
+        <a class="btn btn-outline-info" ui-sref="viewChannelShows({ id: show.channel.id })">{{show.channel.name}} Shows</a>
+    </p>
+</div>

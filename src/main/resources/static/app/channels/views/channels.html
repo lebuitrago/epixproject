@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Channels</title>
-</head>
-<body>
-<p>Channels</p>
+
+<div class="starter-template">
+    <h1>Fictional TV Channels</h1>
+    <p class="lead">Channels Available<br> </p>
+</div>
 
 <table class="table table-striped table-bordered table-hover">
     <tr>
@@ -13,7 +10,7 @@
         <th>Name</th>
         <th>Number</th>
     </tr>
-    <tr ng-repeat="channel in channels">
+    <tr ng-repeat="channel in channels" ui-sref="viewChannelShows({ id: channel.id })">
         <td><img src="/images/{{channel.pic_name}}" alt="Channel Logo"></td>
         <td>{{channel.name}}</td>
         <td>{{channel.number}}</td>
@@ -27,6 +24,3 @@
         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
     </div>
 </div>
-
-</body>
-</html>

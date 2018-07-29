@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Shows</title>
-</head>
-<body>
 <div class="starter-template">
     <h1>Fictional TV Shows</h1>
-    <p class="lead">Show Listing<br> </p>
+    <p class="lead">Complete List of Shows Available<br> </p>
 </div>
 
 <table class="table table-striped table-bordered table-hover">
@@ -16,20 +9,9 @@
         <th>Description</th>
         <th>Channel</th>
     </tr>
-    <tr ng-repeat="show in shows">
+    <tr ng-repeat="show in shows" ui-sref="viewShow({ id: show.id })">
         <td>{{show.name}}</td>
         <td>{{show.description}}</td>
         <td>{{show.channel.name}}</td>
     </tr>
 </table>
-
-<div class="media">
-    <img class="mr-3" src="/images/epix.png" alt="Generic placeholder image">
-    <div class="media-body">
-        <h5 class="mt-0">Channel #100</h5>
-        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-    </div>
-</div>
-
-</body>
-</html>
