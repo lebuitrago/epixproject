@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/cover.css">
+</head>
+<body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <main role="main" class="inner cover">
+            <h1 class="cover-heading">{{show.name}} - Movie Presentation</h1>
+
+            <hr>
+
+            <!-- Movie presentation -->
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VvA4Tbjk8tk?rel=0" allowfullscreen></iframe>
+            </div>
+
+            <hr>
+
+            <div class="btn-group">
+                <a class="btn btn-outline-success" ui-sref="channels">All Channels</a>
+                <a class="btn btn-outline-warning" ui-sref="viewChannelShows({ id: show.channel.id })">{{show.channel.name}} Shows</a>
+                <a class="btn btn-outline-secondary" data-toggle="collapse" data-target="#readmore" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Read More</a>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="collapse multi-collapse" id="readmore">
+                        <div class="card card-body text-light bg-dark">
+                            <p class="font-weight-bold">Description</p>
+                            {{show.description}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <footer class="mastfoot mt-auto">
+                <div class="inner">
+                    <p>Presented by Fictional TV</p>
+                </div>
+            </footer>
+        </main>
+
+
+    </div>
+</body>
+

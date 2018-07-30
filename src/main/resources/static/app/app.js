@@ -23,10 +23,11 @@ var app = angular.module('epixApp', [
 	'ngResource',
     'epixApp.controllers.channel',
     'epixApp.controllers.show',
+    'epixApp.controllers.present',
     'epixApp.services.channel',
-    'epixApp.services.show'
+    'epixApp.services.show',
+    'epixApp.services.present'
 ]);
-
 
 // function for dynamic load with requirejs of a javascript module for use with a view
 // in the state definition call add property `resolve: req('/views/ui.js')`
@@ -103,6 +104,13 @@ app.config([ '$stateProvider', '$urlRouterProvider', '$locationProvider',
                 url: 			'/shows/:id',
                 templateUrl: 	'app/shows/views/show-view.html',
                 controller: 	'ShowViewController'
+            })
+
+			/* **********	PRESENTATIONS	********** */
+            .state('presents', {
+                url: 			'/presents/show/:id',
+                templateUrl: 	'app/presents/views/presents.html',
+                controller: 	'PresentController'
             })
             ;
 		}
