@@ -17,7 +17,8 @@ ResponseEntity with exception handling
 ```
 ### Frontend
 ```
-AngularJS 1.X
+Bootstrap
+AngularJS 1.X (ngResource, ui-router)
 Bower
 Javascript
 HTML
@@ -29,6 +30,29 @@ Hibernate
 CRUD Repository
 JPA Repository
 Relational Database Architecture (Many-to-One relationship between SHOW and CHANNEL)
+```
+
+## API
+### CHANNEL
+```
+/api/v1/channels GET
+- returns a list of all channels available
+
+/api/v1/channels/:id GET
+- returns information for channel specified by ID
+
+/api/v1/channels/:id/shows GET
+- returns list of shows for specified channel ID
+
+```
+### SHOW
+```
+/api/v1/shows GET
+- returns a list of all shows available
+
+/api/v1/shows/:id GET
+- returns information for show specified by ID
+
 ```
 
 ## Notes
@@ -46,8 +70,9 @@ If I had more time, I would do the following:
 2) Create Nano Instance in AWS and have it host the website
 3) Have images hosted in AWS S3 rather than locally
 4) Implement the Service pattern on CHANNEL as well
-5) Create TestNG test suite
-6) Configure app.js routing properly where there would be a main Index.html rather than going to http://localhost:8080/#/channels
+5) Implement PUT, DELETE, POST services for both CHANNEL and SHOW to allow for forms in website
+6) Create TestNG test suite
+7) Configure app.js routing properly where there would be a main Index.html rather than going to http://localhost:8080/#/channels
 
 ## Running Project
 1) Clone project
