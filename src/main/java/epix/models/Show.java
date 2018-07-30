@@ -19,16 +19,20 @@ public class Show {
     @Column(name="PIC_NAME",nullable=false)
     private String pic_name;
 
+    @Column(name="VIDEO_CODE",nullable=false)
+    private String video_code;
+
     @ManyToOne
     @JoinColumn(name="CHANNEL_ID",foreignKey=@ForeignKey(name="CHANNEL_ID_FK"))
     private Channel channel;
 
     public Show() {}
 
-    public Show(String name, String description, String pic_name, Channel channel) {
+    public Show(String name, String description, String pic_name, String video_code, Channel channel) {
         this.name = name;
         this.description = description;
         this.pic_name = pic_name;
+        this.video_code = video_code;
         this.channel = channel;
     }
 
@@ -72,6 +76,14 @@ public class Show {
         this.pic_name = pic_name;
     }
 
+    public String getVideo_code() {
+        return video_code;
+    }
+
+    public void setVideo_code(String video_code) {
+        this.video_code = video_code;
+    }
+
     @Override
     public String toString() {
         return "Show{" +
@@ -79,6 +91,7 @@ public class Show {
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", pic_name='" + pic_name + '\'' +
+                ", video_code='" + video_code + '\'' +
                 ", channel=" + channel +
                 '}';
     }
